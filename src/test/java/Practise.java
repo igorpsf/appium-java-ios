@@ -19,6 +19,13 @@ public class Practise {
         d.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST); // After version 10.2
         d.setCapability(MobileCapabilityType.APP, "/Users/igor/Library/Developer/Xcode/DerivedData/UICatalog-fsluztwozomaqngcoqlcoidvxxzn/Build/Products/Debug-iphonesimulator/UICatalog.app");
 
+        // For real device we need next capabilities
+        d.setCapability("xcodeOrgId","xxxxxxx");
+        d.setCapability("xcodeSigningId","iPhone Developer");
+        d.setCapability("udid","xxxxxxx");
+        d.setCapability("updateWDABundleId","xxxxxxx");
+        //
+
         driver = new IOSDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), d);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         return driver;
