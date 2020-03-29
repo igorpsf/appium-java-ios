@@ -13,13 +13,14 @@ public class Practise {
     public static IOSDriver<IOSElement> capabilities() throws MalformedURLException {
         IOSDriver<IOSElement>driver;
         DesiredCapabilities d = new DesiredCapabilities();
-        d.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 11 Pro Max");
+        // d.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 11 Pro Max");
+        d.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone Xs Max"); // Real Device
         d.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
         d.setCapability(MobileCapabilityType.PLATFORM_VERSION, "13.3");
         d.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST); // After version 10.2
-        d.setCapability(MobileCapabilityType.APP, "/Users/igor/Library/Developer/Xcode/DerivedData/UICatalog-fsluztwozomaqngcoqlcoidvxxzn/Build/Products/Debug-iphonesimulator/UICatalog.app");
+        d.setCapability(MobileCapabilityType.APP, "/Users/igor/Desktop/UICatalog.app");
 
-        // For real device we need next capabilities
+        // Capabilities for real device we need next capabilities
         d.setCapability("xcodeOrgId","xxxxxxx");
         d.setCapability("xcodeSigningId","iPhone Developer");
         d.setCapability("udid","xxxxxxx");
